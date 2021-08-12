@@ -6,11 +6,21 @@
     android:layout_height="match_parent"
     android:gravity="top"
     tools:context=".Pago">
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Genrar Pago" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lytxtphoneNumber"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
+        android:layout_below="@+id/txtTitle"
         android:layout_height="wrap_content"
         android:hint="phoneNumber"
         app:startIconContentDescription="Ingrese Nombre">
@@ -27,8 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lytxtphoneNumber"
-        android:paddingTop="10dp"
         android:hint="countryCode"
+        android:paddingTop="10dp"
         app:startIconContentDescription="Ingrese Apellido">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -36,14 +46,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lytxtclientUserId"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lytxtcountryCode"
-        android:paddingTop="10dp"
         android:hint="clientUserId"
+        android:paddingTop="10dp"
         app:startIconContentDescription="Ingrese Apellido">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -51,14 +62,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lytxtreference"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lytxtclientUserId"
-        android:paddingTop="10dp"
         android:hint="Reference"
+        android:paddingTop="10dp"
         app:startIconContentDescription="Ingrese Apellido">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -66,30 +78,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lytxtamount"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lytxtreference"
+        android:hint="Monto"
         android:paddingTop="10dp"
-        android:hint="Amount"
         app:startIconContentDescription="Ingrese Apellido">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtamount"
-            android:inputType="number"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lytxtamountWithTax"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lytxtamount"
-        android:paddingTop="10dp"
         android:hint="amountWithTax"
+        android:paddingTop="10dp"
         app:startIconContentDescription="Ingrese Apellido">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -98,4 +112,16 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnpagar"
+        style="?attr/materialButtonToggleGroupStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lytxtamountWithTax"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="Generar Pago"
+        android:textSize="20dp"
+        app:cornerRadius="25dp" />
 </RelativeLayout>

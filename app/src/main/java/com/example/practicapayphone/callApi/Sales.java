@@ -19,12 +19,15 @@ import java.util.Map;
 
 public class Sales {
     Context ctn;
-    public Sales(Context context) {
+    String Token;
+    public Sales(Context context,String AccessToken) {
         this.ctn=context;
+        this.Token=AccessToken;
     }
 
-    public String salesPost(String AccessToken, String jsonModel){
+    public String salesPost( String jsonModel){
         String UrlRegions = "https://pay.payphonetodoesposible.com/api/Sale";
+        final String[] respuesta = new String[1];
         StringRequest llamado = new StringRequest(Request.Method.POST, UrlRegions, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -32,6 +35,7 @@ public class Sales {
                     try {
                         JSONArray ArrayJson = new JSONArray(response);
                         Log.i("res", ArrayJson.toString());
+                        respuesta[0] = ArrayJson.toString() ;
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -47,7 +51,7 @@ public class Sales {
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("Content-Type", "application/json; charset=UTF-8");
-                params.put("Authorization", "Bearer " + AccessToken);
+                params.put("Authorization", "Bearer " + Token);
                 return params;
             }
 
@@ -60,6 +64,6 @@ public class Sales {
         };
         RequestQueue ejecVolley = Volley.newRequestQueue(ctn);
         ejecVolley.add(llamado);
-        return "";
+        return respuesta[0];
     }
 }
