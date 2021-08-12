@@ -2,6 +2,7 @@ package com.example.practicapayphone.callApi;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -44,7 +45,8 @@ public class Sales {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("error is ", "" + error);
+                Log.e("error is ", "" + error.getMessage());
+                Toast.makeText(ctn.getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }) {
             @Override

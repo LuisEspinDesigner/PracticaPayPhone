@@ -32,59 +32,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lytxtcountryCode"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lytxtphoneNumber"
-        android:hint="countryCode"
-        android:paddingTop="10dp"
-        app:startIconContentDescription="Ingrese Apellido">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtcountryCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lytxtclientUserId"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lytxtcountryCode"
-        android:hint="clientUserId"
-        android:paddingTop="10dp"
-        app:startIconContentDescription="Ingrese Apellido">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtclientUserId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lytxtreference"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lytxtclientUserId"
-        android:hint="Reference"
-        android:paddingTop="10dp"
-        app:startIconContentDescription="Ingrese Apellido">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtreference"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lytxtamount"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lytxtreference"
+        android:layout_below="@+id/lytxtphoneNumber"
         android:hint="Monto"
         android:paddingTop="10dp"
         app:startIconContentDescription="Ingrese Apellido">
