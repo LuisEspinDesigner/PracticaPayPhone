@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    tools:context=".Pago">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytxtphoneNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="phoneNumber"
+        app:startIconContentDescription="Ingrese Nombre">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtphoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytxtcountryCode"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lytxtphoneNumber"
+        android:paddingTop="10dp"
+        android:hint="countryCode"
+        app:startIconContentDescription="Ingrese Apellido">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtcountryCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytxtclientUserId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lytxtcountryCode"
+        android:paddingTop="10dp"
+        android:hint="clientUserId"
+        app:startIconContentDescription="Ingrese Apellido">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtclientUserId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytxtreference"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lytxtclientUserId"
+        android:paddingTop="10dp"
+        android:hint="Reference"
+        app:startIconContentDescription="Ingrese Apellido">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtreference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytxtamount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lytxtreference"
+        android:paddingTop="10dp"
+        android:hint="Amount"
+        app:startIconContentDescription="Ingrese Apellido">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtamount"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lytxtamountWithTax"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lytxtamount"
+        android:paddingTop="10dp"
+        android:hint="amountWithTax"
+        app:startIconContentDescription="Ingrese Apellido">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtamountWithTax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>
